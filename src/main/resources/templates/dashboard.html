@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8"/>
+    <title>Admin Dashboard | Taxi Booking</title>
+    <link rel="icon" href="/assets/images/taxi.png"/>
+    <link rel="stylesheet" href="/assets/css/baseStyle.css"/>
+    <link rel="stylesheet" href="/assets/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/assets/css/style.css"/>
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+<!---------------sidebar-------------->
+<div th:include="sidebar :: sidebarNav"></div>
+<!---------------sidebar-------------->
+
+<section class="home-section">
+    <!---------------header-------------->
+    <nav>
+        <div class="sidebar-button">
+            <i class="bx bx-menu sidebarBtn"></i>
+            <span class="dashboard">Dashboard</span>
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="Search..."/>
+            <i class="bx bx-search"></i>
+        </div>
+        <div class="profile-details">
+            <img src="/assets/images/profile.jpg" alt=""/>
+            <span class="admin_name">Mohamed Jasir</span>
+            <i class="bx bx-chevron-down"></i>
+        </div>
+    </nav>
+    <!---------------header-------------->
+
+    <div class="home-content">
+        <div class="overview-boxes">
+            <div class="box">
+                <div class="right-side">
+                    <div class="box-topic text-center">Booked</div>
+                    <div class="number">76</div>
+                    <div class="indicator">
+                    </div>
+                </div>
+                <i class="bx bx-cart-alt cart"></i>
+            </div>
+            <div class="box">
+                <div class="right-side">
+                    <div class="box-topic text-center">Canceled</div>
+                    <div class="number">16</div>
+                    <div class="indicator">
+                    </div>
+                </div>
+                <i class="bx bxs-cart-add cart two"></i>
+            </div>
+            <div class="box">
+                <div class="right-side">
+                    <div class="box-topic text-center">New User</div>
+                    <div class="number">8</div>
+                    <div class="indicator">
+                    </div>
+                </div>
+                <i class="bx bx-cart cart three"></i>
+            </div>
+            <div class="box">
+                <div class="right-side">
+                    <div class="box-topic text-center">Collection</div>
+                    <div class="number" style="font-size: 20px">LKR.</div>
+                    <div class="number"> 11,086</div>
+                    <div class="indicator">
+                    </div>
+                </div>
+                <i class="bx bxs-cart-download cart four"></i>
+            </div>
+        </div>
+
+        <!-- start Payment Details -->
+        <div class="sales-boxes">
+            <div class="recent-sales">
+                <div class="row">
+                    <table class="table">
+                        <span class="fs-5 fw-bold mb-2" style="margin-left: -15px">Driver Details</span>
+                        <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Name</th>
+                            <th>Join Date</th>
+                            <th>Vehicle Type</th>
+                            <th>Status</th>
+                            <th>Phone</th>
+                            <th>Vehicle Number</th>
+                            <th>Edit</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Jens Brincker</td>
+                            <td>23/05/2016</td>
+                            <td>SUV</td>
+                            <td>
+                        															<span class="label label-sm box-shadow-1 label-success">On
+                        																Trip</span>
+                            </td>
+                            <td>123456789</td>
+                            <td>XN 01 1235</td>
+                            <td>
+                                <a href="#" class="btn btn-tbl-edit btn-xs">
+                                    <i class="fa fa-pencil"></i>
+                                </a>
+                                <button class="btn btn-tbl-delete btn-xs">
+                                    <i class="fa fa-trash-o "></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Mark Hay</td>
+                            <td>24/05/2017</td>
+                            <td>SEDAN</td>
+                            <td>
+                        															<span
+                                                                                            class="label label-sm box-shadow-1 label-warning">Available
+                        															</span>
+                            </td>
+                            <td>123456789</td>
+                            <td>Xp 09 4354</td>
+                            <td>
+                                <a href="#" class="btn btn-tbl-edit btn-xs">
+                                    <i class="fa fa-pencil"></i>
+                                </a>
+                                <button class="btn btn-tbl-delete btn-xs">
+                                    <i class="fa fa-trash-o "></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Anthony Davie</td>
+                            <td>17/05/2016</td>
+                            <td>Crossover</td>
+                            <td>
+                        															<span class="label label-sm box-shadow-1 label-success ">on
+                        																trip</span>
+                            </td>
+                            <td>123456789</td>
+                            <td>Xp 09 4357</td>
+                            <td>
+                                <a href="#" class="btn btn-tbl-edit btn-xs">
+                                    <i class="fa fa-pencil"></i>
+                                </a>
+                                <button class="btn btn-tbl-delete btn-xs">
+                                    <i class="fa fa-trash-o "></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>David Perry</td>
+                            <td>19/04/2016</td>
+                            <td>Coupe</td>
+                            <td>
+                        															<span
+                                                                                            class="label label-sm box-shadow-1 label-danger">leave</span>
+                            </td>
+                            <td>123456789</td>
+                            <td>GJ 98 3454</td>
+                            <td>
+                                <a href="#" class="btn btn-tbl-edit btn-xs">
+                                    <i class="fa fa-pencil"></i>
+                                </a>
+                                <button class="btn btn-tbl-delete btn-xs">
+                                    <i class="fa fa-trash-o "></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Anthony Davie</td>
+                            <td>21/05/2016</td>
+                            <td>Van</td>
+                            <td>
+                        															<span class="label label-sm box-shadow-1 label-success ">on
+                        																trip</span>
+                            </td>
+                            <td>123456789</td>
+                            <td>GT 07 6787</td>
+                            <td>
+                                <a href="#" class="btn btn-tbl-edit btn-xs">
+                                    <i class="fa fa-pencil"></i>
+                                </a>
+                                <button class="btn btn-tbl-delete btn-xs">
+                                    <i class="fa fa-trash-o "></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Alan Gilchrist</td>
+                            <td>15/05/2016</td>
+                            <td>Wagon</td>
+                            <td>
+                        															<span
+                                                                                            class="label label-sm box-shadow-1 label-warning ">Available</span>
+                            </td>
+                            <td>123456789</td>
+                            <td>PT 02 3534</td>
+                            <td>
+                                <a href="#" class="btn btn-tbl-edit btn-xs">
+                                    <i class="fa fa-pencil"></i>
+                                </a>
+                                <button class="btn btn-tbl-delete btn-xs">
+                                    <i class="fa fa-trash-o "></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Jens Brincker</td>
+                            <td>23/05/2016</td>
+                            <td>SUV</td>
+                            <td>
+                        															<span class="label label-sm box-shadow-1 label-success">On
+                        																Trip</span>
+                            </td>
+                            <td>123456789</td>
+                            <td>XN 01 1235</td>
+                            <td>
+                                <a href="#" class="btn btn-tbl-edit btn-xs">
+                                    <i class="fa fa-pencil"></i>
+                                </a>
+                                <button class="btn btn-tbl-delete btn-xs">
+                                    <i class="fa fa-trash-o "></i>
+                                </button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- end Payment Details -->
+
+        <!-- salary details -->
+        <div class="sales-boxes mt-4">
+            <div class="recent-sales">
+                <div class="row">
+                    <span class="fs-5 fw-bold mb-2" style="margin-left: -15px">Salary Details</span>
+
+                        <table class="table">
+                            <tbody>
+                            <tr>
+                                <th>Image</th>
+                                <th>Name</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th>Ammount</th>
+                                <th>Transaction ID</th>
+                            </tr>
+                            <tr>
+                                <td class="patient-img sorting_1">
+                                    <img src="../../assets/img/adminUser/user6.jpg" alt="">
+                                </td>
+                                <td>John Deo</td>
+                                <td>05-01-2017</td>
+                                <td><span class="label label-danger">Unpaid</span></td>
+                                <td>1200$</td>
+                                <td>#7234486</td>
+                            </tr>
+                            <tr>
+                                <td class="patient-img sorting_1">
+                                    <img src="../../assets/img/adminUser/user4.jpg" alt="">
+                                </td>
+                                <td>Eugine Turner</td>
+                                <td>04-01-2017</td>
+                                <td><span class="label label-success">Paid</span></td>
+                                <td>1400$</td>
+                                <td>#7234417</td>
+                            </tr>
+                            <tr>
+                                <td class="patient-img sorting_1">
+                                    <img src="../../assets/img/adminUser/user2.jpg" alt="">
+                                </td>
+                                <td>Jacqueline Howell</td>
+                                <td>03-01-2017</td>
+                                <td><span class="label label-warning">Pending</span></td>
+                                <td>1100$</td>
+                                <td>#7234454</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- salary details -->
+
+        </div>
+</section>
+
+<script>
+    let sidebar = document.querySelector(".sidebar");
+    let sidebarBtn = document.querySelector(".sidebarBtn");
+    sidebarBtn.onclick = function () {
+        sidebar.classList.toggle("active");
+        if (sidebar.classList.contains("active")) {
+            sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+        } else sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+    };
+</script>
+</body>
+</html>

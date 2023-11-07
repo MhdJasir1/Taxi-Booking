@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8"/>
+    <title>Add Driver | Taxi Booking</title>
+    <link rel="icon" href="/assets/images/taxi.png"/>
+    <link rel="stylesheet" href="/assets/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/assets/css/baseStyle.css"/>
+    <link rel="stylesheet" href="/assets/css/style.css"/>
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+<!---------------sidebar-------------->
+<div th:include="sidebar :: sidebarNav"></div>
+<!---------------sidebar-------------->
+
+<section class="home-section">
+    <!---------------header-------------->
+    <nav>
+        <div class="sidebar-button">
+            <i class="bx bx-menu sidebarBtn"></i>
+            <span class="dashboard">Driver</span>
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="Search..."/>
+            <i class="bx bx-search"></i>
+        </div>
+        <div class="profile-details">
+            <img src="/assets/images/profile.jpg" alt=""/>
+            <span class="admin_name">Mohamed Jasir</span>
+            <i class="bx bx-chevron-down"></i>
+        </div>
+    </nav>
+    <!---------------header-------------->
+
+    <div class="home-content">
+
+        <!-- active trips -->
+        <div class="sales-boxes">
+            <div class="recent-sales">
+                <div class="row">
+                    <div class="col-12 ">
+                        <div class="row mb-3">
+                            <span class="fs-5 fw-bold mb-2" style="margin-left: -15px">Add Driver</span>
+                            <div class="col-6">
+                                <div class="col-12 mt-3">
+                                    <span>First Name</span>
+                                </div>
+                                <div class="col-12 mt-3">
+                                    <input type="text" class="form-control" id="fname" required/>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="col-12 mt-3">
+                                    <span>Last Name</span>
+                                </div>
+                                <div class="col-12 mt-3">
+                                    <input type="text" class="form-control" id="lname" required/>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="col-12 mt-3">
+                                    <span>Address</span>
+                                </div>
+                                <div class="col-12 mt-3">
+                                    <input type="text" class="form-control" id="address" required/>
+                                </div>
+                            </div>
+
+
+<!--                            <div class="col-12 mt-3">-->
+<!--                                <span>Last Name</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-12 mt-3">-->
+<!--                                <input type="text" class="form-control" id="lname" required/>-->
+<!--                            </div>-->
+
+
+                            <div class="col-6 gy-3">
+                                <button class="col-12 btn btn-primary">Save</button>
+                            </div>
+                            <div class="col-6 gy-3">
+                                <button class="col-12 btn btn-primary">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- active trips -->
+
+        <!-- completed trips -->
+        <div class="sales-boxes mt-4">
+            <div class="recent-sales">
+                <div class="row">
+                    <table class="table">
+                        <span class="fs-5 fw-bold mb-2" style="margin-left: -15px">Drivers</span>
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Driver Details</th>
+                            <th>Contact Details</th>
+                            <th>Vehicle Details</th>
+                            <th>Package</th>
+                            <th>Account</th>
+                            <th>Option</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>
+                                <span>Driver ID : <span>ID234</span> </span><br/>
+                                <span>Username : <span>driver1</span> </span><br/>
+                                <span>Name : <span>driver1</span> </span><br/>
+                                <span>Gender : <span>male</span> </span><br/>
+                                <span>NIC : <span>773121418v</span> </span><br/>
+                                <span>NIC : <span>773121418v</span> </span><br/>
+                                <span>Registered Date : <span>2022-10-17</span> </span><br/>
+                                <span>Registered Time : <span>11:05:25 am</span> </span><br/>
+                            </td>
+                            <td>
+                                <span>Contact : <span>077 111 2222</span> </span><br/>
+                                <span>Emergency : <span>077 111 2222</span> </span><br/>
+                                <span>Email : <span>driver1@gmail.com</span> </span><br/>
+                                <span>Address : <span>No 21/2, colombo 5.</span> </span><br/>
+                            </td>
+                            <td>
+                                <span>Vehicle Type : <span>car</span> </span><br/>
+                                <span>Plate No : <span>KC-1212</span> </span><br/>
+                                <span>Color : <span>Red</span> </span><br/>
+                                <span>Manufacture Year : <span>2015</span> </span><br/>
+                            </td>
+                            <td>
+                                <span>Vehicle Type : <span>car</span> </span><br/>
+                                <span>Passengers : <span>4</span> </span><br/>
+                                <span>Minimum Distance : <span>5</span> KM </span><br/>
+                                <span>Minimum Charge : <span>Rs.</span> 150 </span><br/>
+                                <span>Per KM charge : <span>Rs.</span> 50 </span><br/>
+                            </td>
+                            <td>
+                                <span>Cash Earnings : <span>Rs.</span> 0.00 </span><br/>
+                                <span>Card Earnings : <span>Rs.</span> 0.00 </span><br/>
+                                <span>Total Earnings : <span>Rs.</span> 0.00 </span><br/>
+                                <span>Payable Commission : <span>Rs.</span> 0.00 </span><br/>
+                            </td>
+                            <td>
+                                <span class="text-center"><i class="bi bi-x-square text-dark fs-5"></i></span>
+                            </td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- completed trips -->
+
+        </div>
+</section>
+
+<script>
+    let sidebar = document.querySelector(".sidebar");
+    let sidebarBtn = document.querySelector(".sidebarBtn");
+    sidebarBtn.onclick = function () {
+        sidebar.classList.toggle("active");
+        if (sidebar.classList.contains("active")) {
+            sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+        } else sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+    };
+</script>
+</body>
+</html>

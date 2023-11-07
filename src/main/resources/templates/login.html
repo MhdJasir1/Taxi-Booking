@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login | Taxi Booking</title>
+    <link rel="icon" href="/assets/images/taxi.png"/>
+    <link rel="stylesheet" href="/assets/css/baseStyle.css" />
+    <link rel="stylesheet" href="/assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body class="bg-white-customized">
+<div class="container-fluid vh-100 d-flex justify-content-center">
+    <div class="row align-content-center"  style="max-width: 500px">
+        <div class="col-12 my-3 text-center">
+            <h3>Welcome to Taxi Booking!</h3>
+        </div>
+        <div class="col-10 form-control">
+            <div class="row mb-3">
+                <div class="col-12 mt-3">
+                    <span class="text-danger text-center" id="msg"></span>
+                </div>
+
+                <div class="col-12 mt-3">
+                    <span>Username</span>
+                </div>
+                <div class="col-12 mt-3">
+                    <input type="text" class="form-control" id="username" placeholder="username" required/>
+                </div>
+
+                <div class="col-12 mt-3">
+                    <span>Password</span>
+                </div>
+                <div class="col-12 mt-3">
+                    <input type="password" class="form-control" id="password" placeholder="******" required/>
+                </div>
+
+                <div class="col-12 col-md-8 col-lg-6 mx-auto gy-3">
+                    <button class="col-12 btn btn-primary" id="loginProcess">Sign In</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/assets/js/script.js"></script>
+
+</body>
+</html>
+
